@@ -1,0 +1,88 @@
+:root {
+  --ink: #14213D;
+  --ink-soft: #2A3A5C;
+  --paper: #FBF8F3;
+  --paper-raised: #FFFFFF;
+  --hairline: #E4DFD4;
+  --hairline-strong: #D6CFC0;
+  --emerald: #1F7A53;
+  --emerald-soft: #E5F2EC;
+  --amber: #C97A2B;
+  --amber-soft: #FBEFE0;
+  --slate: #6B7280;
+  --slate-dark: #4B5468;
+  --red: #B3473B;
+  --red-soft: #FBEAE7;
+
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-card: 0 1px 2px rgba(20, 33, 61, 0.04), 0 1px 0 rgba(20, 33, 61, 0.03);
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--ink);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--amber-soft);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--emerald);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
